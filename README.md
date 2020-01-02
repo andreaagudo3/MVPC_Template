@@ -56,7 +56,7 @@ class LoginConfigurator {
     }
 }
 ```
-__Coordinator:
+COORDINATOR:
 
 * `Main Coordinator`
 ```swift
