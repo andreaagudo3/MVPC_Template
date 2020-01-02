@@ -77,12 +77,15 @@ class MainCoordinator {
 ```swift
 final class LoginCoordinator: MainCoordinator {
 
+    var currentController: LoginVC?
+    
     override init(with navigation: UINavigationController) {
         super.init(with: navigation)
+        currentController = LoginConfigurator().create(delegate: self)
     }
 
     override func start() {
-
+        navigationController.pushViewController(currentController ?? UIViewController(), animated: true)
     }
 }
 
