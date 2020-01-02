@@ -56,6 +56,41 @@ class LoginConfigurator {
     }
 }
 ```
+__Coordinator:
+
+* `Main Coordinator`
+```swift
+class MainCoordinator {
+
+    var navigationController: UINavigationController
+
+    init(with navigation: UINavigationController) {
+        self.navigationController = navigation
+    }
+
+    func start() {}
+    
+}
+```
+
+* `Your Coordinator`
+```swift
+final class LoginCoordinator: MainCoordinator {
+
+    override init(with navigation: UINavigationController) {
+        super.init(with: navigation)
+    }
+
+    override func start() {
+
+    }
+}
+
+extension LoginCoordinator: LoginSceneDelegate {
+
+}
+
+```
 
 * `Contract`
 ```swift
